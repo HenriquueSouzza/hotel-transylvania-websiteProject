@@ -31,5 +31,5 @@ Route::post('/busca', function () {
 })->name('site.search');
 
 Route::get('/contato', function () {
-    return view('site.embreve');
+    return view('site.contactArea');
 })->name('site.contact');
