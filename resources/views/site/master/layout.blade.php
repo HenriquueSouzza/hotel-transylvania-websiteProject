@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url(mix('site/css/styles.css')) }}">
-    <title>Hotel Transylvania</title>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url(mix('site/css/styles.css')) }}">
+    <title>Hotel Transylvania</title>
 </head>
 <body>
     <div class="container">
@@ -85,9 +85,9 @@
             </div>
         </footer>
     </div>
-<button class="scrollToTopBtn" title="Ir para o Topo"><i class="fas fa-arrow-up"></i></button>
-<script src="{{ url(mix('site/js/script.js')) }}"></script>
-<script src="https://kit.fontawesome.com/1ba664ef57.js" crossorigin="anonymous"></script>
+    <button class="scrollToTopBtn" title="Ir para o Topo"><i class="fas fa-arrow-up"></i></button>
+    <script src="{{ url(mix('site/js/script.js')) }}"></script>
+    <script src="https://kit.fontawesome.com/1ba664ef57.js" crossorigin="anonymous"></script>
 </body>
 </html>
 

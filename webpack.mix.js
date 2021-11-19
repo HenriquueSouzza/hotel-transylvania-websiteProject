@@ -6,9 +6,9 @@ mix.styles([
 ], 'public/site/css/styles.css')
 
     .scripts([
+        'resources/views/site/js/jquery.mask.js',
         'resources/views/site/js/jquery.js',
-        'resources/views/site/js/main.js',
-        'resources/views/site/js/jquery.mask.js'
+        'resources/views/site/js/main.js'
     ], 'public/site/js/script.js')
 
 .version();

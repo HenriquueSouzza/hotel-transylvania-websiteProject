@@ -70,8 +70,11 @@ $( function() {
 } );
 
 //mask date
+
 $(function($){
   $("#from").mask("99/99/9999");
   $("#to").mask("99/99/9999");
+  $("#telefone").mask("(99) 99999-9999");
 });
+
 //end jquery

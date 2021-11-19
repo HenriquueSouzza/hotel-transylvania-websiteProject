@@ -1,150 +1,3 @@
-//data range
-$( function() {
-  var dateFormat = "dd/mm/yy",
-    from = $( "#from" )
-      .datepicker({
-        defaultDate: "+1w",
-        numberOfMonths: 1,
-        closeText: 'Fechar',
-        prevText: 'Anterior',
-        nextText: 'proximo',
-        currentText: 'Hoje',
-        monthNames: ['Janeiro','Fevereiro','Mar&ccedil;o','Abril','Maio','Junho',
-        'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
-        monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun',
-        'Jul','Ago','Set','Out','Nov','Dez'],
-        dayNames: ['Domingo','Segunda-feira','Ter&ccedil;a-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'],
-        dayNamesShort: ['Do','Se','Te','Qu','Qu','Se','Sa'],
-        dayNamesMin: ['Do','Se','Te','Qu','Qu','Se','Sa'],
-        weekHeader: 'Sm',
-        dateFormat: 'dd/mm/yy',
-        firstDay: 0,
-        isRTL: false,
-        showMonthAfterYear: false,
-        yearSuffix: '',
-        minDate: 0,
-        maxDate: "+5m",
-        showAnim: "slideDown"
-      })
-      .on( "change", function() {
-        to.datepicker( "option", "minDate", getDate( this ) );
-      }),
-    to = $( "#to" ).datepicker({
-      defaultDate: "+1w",
-      numberOfMonths: 1,
-      closeText: 'Fechar',
-      prevText: 'Anterior',
-      nextText: 'proximo',
-      currentText: 'Hoje',
-      monthNames: ['Janeiro','Fevereiro','Mar&ccedil;o','Abril','Maio','Junho',
-      'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
-      monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun',
-      'Jul','Ago','Set','Out','Nov','Dez'],
-      dayNames: ['Domingo','Segunda-feira','Ter&ccedil;a-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'],
-      dayNamesShort: ['Do','Se','Te','Qu','Qu','Se','Sa'],
-      dayNamesMin: ['Do','Se','Te','Qu','Qu','Se','Sa'],
-      weekHeader: 'Sm',
-      dateFormat: 'dd/mm/yy',
-      firstDay: 0,
-      isRTL: false,
-      showMonthAfterYear: false,
-      yearSuffix: '',
-      minDate: 0,
-      maxDate: "+5m",
-      showAnim: "slideDown"
-    })
-    .on( "change", function() {
-      from.datepicker( "option", "maxDate", getDate( this ) );
-    });
-
-  function getDate( element ) {
-    var date;
-    try {
-      date = $.datepicker.parseDate( dateFormat, element.value );
-    } catch( error ) {
-      date = null;
-    }
-
-    return date;
-  }
-} );
-
-//mask date
-$(function($){
-  $("#from").mask("99/99/9999");
-  $("#to").mask("99/99/9999");
-});
-//end jquery
-// animação do header
-const header = document.querySelector("header");
-const meioheader = document.querySelector("div.meioheader");
-const logo = document.querySelector("div.logo");
-  window.addEventListener("scroll", () => {
-  header.classList.toggle("headerscroll", window.scrollY > 0);
-  meioheader.classList.toggle("meioheaderscroll", window.scrollY > 0);
-  logo.classList.toggle("logoscroll", window.scrollY > 0);
-});
-
-// menu navegação/hamburg
-const menuhamburg = document.getElementById('btnmenu');
-
-function toggleMenu() {
-  const nav = document.getElementById('nav');
-  nav.classList.toggle('menuactive');
-}
-menuhamburg.addEventListener('click', toggleMenu);
-
-// slide de atividades
-var slideIndex = 1;
-showSlides(slideIndex);
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  slides[slideIndex-1].style.display = "block";
-};
-
-// back to top
-// target
-var target = document.querySelector("footer");
-
-var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
-var rootElement = document.documentElement;
-
-
-function callback(entries, observer) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      scrollToTopBtn.classList.add("showBtn");
-    } else {
-      scrollToTopBtn.classList.remove("showBtn");
-    }
-  });
-}
-
-function scrollToTop() {
-  rootElement.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-}
-scrollToTopBtn.addEventListener("click", scrollToTop);
-
-let observer = new IntersectionObserver(callback);
-observer.observe(target);
-// end main
 //jquery mask
 /**
  * jquery.mask.js
@@ -751,3 +604,153 @@ observer.observe(target);
     }, globals.watchInterval);
 }, window.jQuery, window.Zepto));
 //end jquery mask
+//data range
+$( function() {
+  var dateFormat = "dd/mm/yy",
+    from = $( "#from" )
+      .datepicker({
+        defaultDate: "+1w",
+        numberOfMonths: 1,
+        closeText: 'Fechar',
+        prevText: 'Anterior',
+        nextText: 'proximo',
+        currentText: 'Hoje',
+        monthNames: ['Janeiro','Fevereiro','Mar&ccedil;o','Abril','Maio','Junho',
+        'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+        monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun',
+        'Jul','Ago','Set','Out','Nov','Dez'],
+        dayNames: ['Domingo','Segunda-feira','Ter&ccedil;a-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'],
+        dayNamesShort: ['Do','Se','Te','Qu','Qu','Se','Sa'],
+        dayNamesMin: ['Do','Se','Te','Qu','Qu','Se','Sa'],
+        weekHeader: 'Sm',
+        dateFormat: 'dd/mm/yy',
+        firstDay: 0,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: '',
+        minDate: 0,
+        maxDate: "+5m",
+        showAnim: "slideDown"
+      })
+      .on( "change", function() {
+        to.datepicker( "option", "minDate", getDate( this ) );
+      }),
+    to = $( "#to" ).datepicker({
+      defaultDate: "+1w",
+      numberOfMonths: 1,
+      closeText: 'Fechar',
+      prevText: 'Anterior',
+      nextText: 'proximo',
+      currentText: 'Hoje',
+      monthNames: ['Janeiro','Fevereiro','Mar&ccedil;o','Abril','Maio','Junho',
+      'Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+      monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun',
+      'Jul','Ago','Set','Out','Nov','Dez'],
+      dayNames: ['Domingo','Segunda-feira','Ter&ccedil;a-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sabado'],
+      dayNamesShort: ['Do','Se','Te','Qu','Qu','Se','Sa'],
+      dayNamesMin: ['Do','Se','Te','Qu','Qu','Se','Sa'],
+      weekHeader: 'Sm',
+      dateFormat: 'dd/mm/yy',
+      firstDay: 0,
+      isRTL: false,
+      showMonthAfterYear: false,
+      yearSuffix: '',
+      minDate: 0,
+      maxDate: "+5m",
+      showAnim: "slideDown"
+    })
+    .on( "change", function() {
+      from.datepicker( "option", "maxDate", getDate( this ) );
+    });
+
+  function getDate( element ) {
+    var date;
+    try {
+      date = $.datepicker.parseDate( dateFormat, element.value );
+    } catch( error ) {
+      date = null;
+    }
+
+    return date;
+  }
+} );
+
+//mask date
+
+$(function($){
+  $("#from").mask("99/99/9999");
+  $("#to").mask("99/99/9999");
+  $("#telefone").mask("(99) 99999-9999");
+});
+
+//end jquery
+// animação do header
+const header = document.querySelector("header");
+const meioheader = document.querySelector("div.meioheader");
+const logo = document.querySelector("div.logo");
+  window.addEventListener("scroll", () => {
+  header.classList.toggle("headerscroll", window.scrollY > 0);
+  meioheader.classList.toggle("meioheaderscroll", window.scrollY > 0);
+  logo.classList.toggle("logoscroll", window.scrollY > 0);
+});
+
+// menu navegação/hamburg
+const menuhamburg = document.getElementById('btnmenu');
+
+function toggleMenu() {
+  const nav = document.getElementById('nav');
+  nav.classList.toggle('menuactive');
+}
+menuhamburg.addEventListener('click', toggleMenu);
+
+// slide de atividades
+var slideIndex = 1;
+showSlides(slideIndex);
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+};
+
+// back to top
+// target
+var target = document.querySelector("footer");
+
+var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+var rootElement = document.documentElement;
+
+
+function callback(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      scrollToTopBtn.classList.add("showBtn");
+    } else {
+      scrollToTopBtn.classList.remove("showBtn");
+    }
+  });
+}
+
+function scrollToTop() {
+  rootElement.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+scrollToTopBtn.addEventListener("click", scrollToTop);
+
+let observer = new IntersectionObserver(callback);
+observer.observe(target);
+// end main

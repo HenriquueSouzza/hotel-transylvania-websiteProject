@@ -8,33 +8,37 @@
 </section>
 <section class="sectioncontato">
     <div class="divContForms">
+        <h2>área de contato:</h2>
         <form action="" class="formCont" method="get">
-            <div>
-                <div>
-                    <label for="">Nome:</label><br>
-                    <input type="text" name="nome" required placeholder="Digite seu Nome..." maxlength="40">
+            <div class="divFormCont1">
+                <div class="inputP">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="nome" autocomplete="off" required placeholder="Digite seu Nome..." maxlength="40">
                 </div>
-                <div>
-                    <label for="">Email:</label><br>
-                    <input type="text" name="email" required placeholder="Digite seu Email..." maxlength="40">
+                <div class="inputP">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" autocomplete="off" required placeholder="Digite seu Email..." maxlength="40">
                 </div>
-                <div>
-                    <label for="">Telefone:</label><br>
-                    <input type="text" name="telefone" required placeholder="Digite seu Telefone..." maxlength="40" >
+                <div class="inputP">
+                    <i class="fas fa-phone-alt"></i>
+                    <input type="text" id="telefone" name="telefone" autocomplete="off" required placeholder="Digite seu Celular.." maxlength="15">
                 </div>
             </div>
-            <div>
-                <div>
-                    <label for="">Assunto:</label><br>
-                    <input name="assunto" type="text" required placeholder="Digite o assunto..." maxlength="40">
+            <div class="divFormCont1">
+                <div class="inputP">
+                    <i class="fas fa-question"></i>
+                    <select name="assunto" placeholder="Digite sua menssagem...">
+                        <option value="" disabled selected hidden>Escolha o assunto...</option>
+                        <option value="1">Duvidas</option>
+                        <option value="2">Reservas</option>
+                        <option value="3">Financeiro</option>
+                    </select>
                 </div>
-                <div>
-                    <label for="">Texto:</label><br>
-                    <input name="texto" type="text" required placeholder="Digite a menssagem...">
+                <div class="inputT">
+                    <i class="fas fa-edit"></i>
+                    <textarea id="texto" name="texto" type="text" required placeholder="Digite sua menssagem..." maxlength="650"></textarea>
                 </div>
-                <div>
-                    <button type="submit">Enviar</button>
-                </div>
+                <button id="buttonCont" type="submit"><i class="fas fa-paper-plane"></i>Enviar</button>
             </div>
         </form>
     </div>

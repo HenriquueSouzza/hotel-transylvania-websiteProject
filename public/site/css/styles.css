@@ -774,18 +774,109 @@ footer{
 }
 .divContForms{
     height: 70%;
-    width: 1300px;
+    width: 950px;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
 }
+.divContForms h2{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
 .formCont{
     display: flex;
     width: 100%;
     height: 100%;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
-
+.divFormCont1{
+    height: 100%;
+}
+.inputP{
+    width: 350px;
+    height: 40px;
+    display: flex;
+    margin-top: 30px;
+}
+.inputP:nth-child(1){
+    margin-top: 80px;
+}
+.inputP i{
+    background-color: rgb(92, 19, 88);
+    color: rgb(216, 216, 216);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 15%;
+    font-size: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: solid rgb(150, 150, 150) 0.5px;
+}
+.inputP input{
+    width: 85%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: solid rgb(150, 150, 150) 0.5px;
+    font-size: 18px;
+}
+.inputP select{
+    width: 85%;
+    height: 42px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: solid rgb(150, 150, 150) 0.5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.inputT{
+    width: 350px;
+    height: 110px;
+    display: flex;
+    margin-top: 30px;
+}
+.inputT i{
+    background-color: rgb(92, 19, 88);
+    color: rgb(216, 216, 216);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 17.5%;
+    font-size: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: solid rgb(150, 150, 150) 0.5px;
+}
+#texto{
+    resize: none;
+    height: 110px;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 16px;
+}
+#buttonCont{
+    margin-top: 30px;
+    background: transparent;
+    text-transform: uppercase;
+    padding: 10px 33px 10px 20px;
+    border: solid rgb(150, 150, 150) 0.5px;
+    cursor: pointer;
+    transition: all 0.4s;
+    border-radius: 10px;
+}
+#buttonCont:hover{
+    background-color: rgb(92, 19, 88);
+    color: rgb(216, 216, 216);
+}
+#buttonCont i{
+    margin-right: 10px;
+}
 
 
 
