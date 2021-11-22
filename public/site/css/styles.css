@@ -766,24 +766,37 @@ footer{
 }
 /* Contato */ 
 .sectioncontato{
-    display: flex;
-    justify-content: center;
     width: 100%;
-    height: 500px;
+    height: 700px;
+}
+.containercontato{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
+.mapa{
+    width: 100%;
+    height: 200px;
+}
+.mapa iframe{
+    width: 100%;
+    height: 100%;
+}
 .divContForms{
-    height: 70%;
+    height: 60%;
     width: 950px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 .divContForms h2{
     text-transform: uppercase;
     font-size: 30px;
+    text-decoration: underline;
 }
-
 .formCont{
     display: flex;
     width: 100%;
@@ -793,6 +806,12 @@ footer{
 }
 .divFormCont1{
     height: 100%;
+}
+#divisor{
+    width: 1px;
+    margin-bottom: 48px;
+    height: 60%;
+    background-color: rgb(92, 19, 88);
 }
 .inputP{
     width: 350px;
@@ -823,6 +842,7 @@ footer{
     border-bottom-right-radius: 10px;
     border: solid rgb(150, 150, 150) 0.5px;
     font-size: 18px;
+    padding-left: 5px;
 }
 .inputP select{
     width: 85%;
@@ -838,6 +858,9 @@ footer{
     height: 110px;
     display: flex;
     margin-top: 30px;
+}
+.inputT textarea{
+    padding-left: 5px;
 }
 .inputT i{
     background-color: rgb(92, 19, 88);
@@ -867,7 +890,7 @@ footer{
     padding: 10px 33px 10px 20px;
     border: solid rgb(150, 150, 150) 0.5px;
     cursor: pointer;
-    transition: all 0.4s;
+    transition: all 0.3s;
     border-radius: 10px;
 }
 #buttonCont:hover{
