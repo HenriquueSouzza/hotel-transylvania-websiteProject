@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventController;
 
-Route::get('/', function () {
-    return view('site.home');
-})->name('site.home');
+Route::get('/', [EventController::class, 'index'] )->name('site.home');
+Route::get('/reserva/search', [EventController::class, 'searchReserva'] )->name('site.search');
 
 Route::get('/hotel', function () {
     return view('site.embreve');
@@ -25,10 +25,6 @@ Route::get('/atividades', function () {
 Route::get('/reserva', function () {
     return view('site.embreve');
 })->name('site.booking');
-
-Route::post('/busca', function () {
-    return view('site.embreve');
-})->name('site.search');
 
 Route::get('/contato', function () {
     return view('site.contactArea');
