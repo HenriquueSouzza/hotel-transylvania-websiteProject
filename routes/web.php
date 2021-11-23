@@ -1,31 +1,23 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EventController;
+use App\Http\Controllers\routeController;
+use App\Http\Controllers\searchController;
 
-Route::get('/', [EventController::class, 'index'] )->name('site.home');
-Route::get('/reserva/search', [EventController::class, 'searchReserva'] )->name('site.search');
+/*main routes*/
+Route::get('/', [routeController::class, 'index'] )->name('site.home');
 
-Route::get('/hotel', function () {
-    return view('site.embreve');
-})->name('site.hotel');
+Route::get('/hotel', [routeController::class, 'emBreve'])->name('site.hotel');
 
-Route::get('/quartos', function () {
-    return view('site.embreve');
-})->name('site.bedrooms');
+Route::get('/quartos', [routeController::class, 'emBreve'])->name('site.bedrooms');
 
-Route::get('/fotos', function () {
-    return view('site.embreve');
-})->name('site.imgs');
+Route::get('/fotos', [routeController::class, 'emBreve'])->name('site.imgs');
 
-Route::get('/atividades', function () {
-    return view('site.embreve');
-})->name('site.activities');
+Route::get('/atividades', [routeController::class, 'emBreve'])->name('site.activities');
 
-Route::get('/reserva', function () {
-    return view('site.embreve');
-})->name('site.booking');
+Route::get('/reserva', [routeController::class, 'emBreve'])->name('site.booking');
 
-Route::get('/contato', function () {
-    return view('site.contactArea');
-})->name('site.contact');
+Route::get('/contato', [routeController::class, 'emBreve'])->name('site.contact');
+
+/*search route*/
+Route::get('/reserva/search', [searchController::class, 'searchReserva'] )->name('site.search');
