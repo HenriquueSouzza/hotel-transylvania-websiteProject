@@ -21,7 +21,7 @@
                     <ul>
                         <li><a href="{{ route('site.home') }}">home</a></li>
                         <li><a href="{{ route('site.hotel') }}">hotel</a></li>
-                        <li><a href="{{ route('site.bedrooms') }}">quartos</a></li>
+                        <li><a href="{{ route('site.roons') }}">quartos</a></li>
                         <li><a href="{{ route('site.imgs') }}">fotos</a></li>
                         <li><a href="{{ route('site.activities') }}">atividades</a></li>
                         <li><a href="{{ route('site.booking') }}">reserva</a></li>

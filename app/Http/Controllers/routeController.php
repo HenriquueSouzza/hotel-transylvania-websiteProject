@@ -13,4 +13,12 @@ class routeController extends Controller
     public function emBreve(){
         return view('site.embreve');
     }
+    
+    public function contato(){
+        return view('site.contactArea');
+    }
+
+    public function hotel(){
+        return view('site.hotel');
+    }
 }

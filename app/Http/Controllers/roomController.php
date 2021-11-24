@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Quartos;
+use App\Models\Room;
 
 class roomController extends Controller
 {
     public function quartos(){
-        $quartos = Quartos::all();
+        $quartos = Room::all();
 
         return view('site.quartos', ['quartos' => $quartos]);
     }
@@ -18,13 +18,20 @@ class roomController extends Controller
     }
 
     public function store(Request $request){
-            $quartos = new Quartos;
-            $quartos->title = $request->title;
-            $quartos->description = $request->description;
-            $quartos->save();
-            return redirect('/quartos');
-    }
-    public function contato(){
-        return view('site.contactArea');
+            $Room = new Room;
+            $Room->title = $request->title;
+            $Room->description = $request->description;
+
+            //imagane upload
+            if($request->hasFile('image') && $request->file('image')->isValid()){
+                $requestImage = $request->image;
+                $extension = $requestImage->extension(); 
+                $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")).".".$extension;
+                $requestImage->move(public_path('img/rooms'), $imageName);
+                $Room->image = $imageName;
+            }
+
+            $Room->save();
+            return redirect('/quartos/create')->with('msg', 'Quarto criado com sucesso!');
     }
 }

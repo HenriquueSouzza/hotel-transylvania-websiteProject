@@ -921,10 +921,10 @@ footer{
     flex-direction: row;
 }
 .listQuartos img{
-    width: auto;
-    height: auto;
-    max-width: 50%;
+    width: 50%;
+    height: 350px;
     border-radius: 10px;
+    object-fit: cover;
 }
 .informacoesQuartos{
     display: flex;
@@ -957,6 +957,34 @@ footer{
     background-color: rgb(92, 19, 88);
     color: rgb(216, 216, 216);
 }
+/* o hotel */
+.sectionHotel{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 900px;
+    justify-content: center;
+}
+.meioHotel{
+    width: 1300px;
+    height: 100%;
+    
+}
+.meioHotel h2{
+    text-transform: uppercase;
+    font-size: 50px;
+    text-decoration: underline;
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+.meioHotel p{
+    text-align: justify;
+    font-size: 18px;
+}
+
+
+
+
 /* Pagina Em breve */
 .divembreve{
     display: flex;

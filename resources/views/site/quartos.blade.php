@@ -11,7 +11,7 @@
         <h2>quartos</h2>
         @foreach($quartos as $quarto)
         <div class="listQuartos">
-            <img src="{{asset('img/piscinafundo.jpg')}}" alt="imagem teste">
+            <img src="img/rooms/{{$quarto->image}}" alt="imagem teste">
             <div class="informacoesQuartos">
                 <h3>{{$quarto->title}}</h3>
                 <p>{{$quarto->description}}</p>

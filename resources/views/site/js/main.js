@@ -67,4 +67,11 @@ scrollToTopBtn.addEventListener("click", scrollToTop);
 
 let observer = new IntersectionObserver(callback);
 observer.observe(target);
+
+//
+$("#slideshow").craftyslide();
+
+
+
+
 // end main

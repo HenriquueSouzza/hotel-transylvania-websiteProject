@@ -7,10 +7,10 @@ use App\Http\Controllers\roomController;
 /*main routes*/
 Route::get('/', [routeController::class, 'index'] )->name('site.home');
 
-Route::get('/hotel', [routeController::class, 'emBreve'])->name('site.hotel');
+Route::get('/hotel', [routeController::class, 'hotel'])->name('site.hotel');
 
-Route::get('/quartos', [roomController::class, 'quartos'])->name('site.bedrooms');
-Route::get('/quartos/create', [roomController::class, 'quartosCreate'])->name('site.bedroomsCreate');
+Route::get('/quartos', [roomController::class, 'quartos'])->name('site.roons');
+Route::get('/quartos/create', [roomController::class, 'quartosCreate'])->name('site.roonsCreate');
 
 route::post('/create', [roomController::class, 'store'])->name('site.Create');
 

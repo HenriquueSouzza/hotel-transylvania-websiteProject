@@ -1,1252 +1,72 @@
-*{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    font-family: 'Times New Roman', Times, serif;
-}
-html{
-    scroll-behavior: smooth;
-}
-body::-webkit-scrollbar {
-    width: 12px;
-}
-  
-body::-webkit-scrollbar-track {
-    background: rgb(37, 9, 34);
-}
-  
-body::-webkit-scrollbar-thumb {
-    background-color: rgba(163, 0, 141, 0.644);   
-    border-radius: 10px;      
-    border: solid rgba(8, 2, 14, 0.39) 4px;
-}
-body::-webkit-scrollbar-thumb:hover {
-    border: none;
-}
-/*header*/
-header{
-    display: flex;
-    position: fixed;
-    background: rgb(78,0,46);
-    background: linear-gradient(180deg, rgba(78,0,46,0.9500175070028011) 0%, rgba(255,255,255,0) 100%);
-    width: 100%;
-    height: 280px;
-    transition: all 0.4s;
-    z-index: 10000000;
-}
-input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(100%);
-}
-.headerscroll{
-    background-color: rgb(78, 0, 68);
-    height: 80px;
-    box-shadow: 0 10px 50px rgba(78,0,46,0.95);
-}
-.meioheader{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.meioheaderscroll{
-    flex-direction: row-reverse;
-}
-#nav{
-    display: flex;
-    margin-top: 15px;
-    justify-content: flex-end;
-}
-#btnmenu{
-    margin: 14px 0px;
-    align-items: center;
-    display: none;
-    margin-right: 35px;
-}
-#nav ul{
-    display: flex;
-    justify-content: flex-end;
-    width: auto;
-    height: 100%;
-}
-#nav li{
-    position: relative;
-    padding: 2px;
-    margin: 13px;
-    border: none;
-    height: 20px;
-    cursor: pointer;
-}
-#nav li:hover{
-    border: none;
-}
-#nav li::after{
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1.5px;
-    left: 50%;
-    bottom:0;
-    background-color: rgba(255, 255, 255, 0.829);
-    transition: all ease-in-out .3s;
-}
-#nav li:hover::after{
-    width: 100%;
-    left: 0;
-}
-#nav li > a{
-    font-size: 15px;
-    color: white;
-    text-transform: uppercase;
-}
-.logo{
-    height: 100%;
-    display: flex;
-    justify-content: center
-}
-.logo img{
-    width: auto;
-    height: 100%;
-    /*max-height: 258px;*/
-    padding-right: 14px;
-    filter: drop-shadow(0px 0px 20px rgb(255, 0, 234));
-}
-.logoscroll img{
-    filter: none;
-}
-/*primeira sction*/
-.sectionfoto{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    background-image: url("http://hoteltransilvania.com/img/fundo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-.meiosectionfoto{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 500px;
-}
-.meiosectionfoto h1{
-    color: white;
-    text-transform: uppercase;
-    text-shadow: 0px 0px 8px rgb(68, 43, 65);
-    margin-bottom: 5px;
-}
-.meiosectionfoto img{
-    filter: invert(1);
-    opacity: 60%;
-    margin-bottom: 25px;
-}
-.sectionfotosemform{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: calc(100vh - 500px);
-    background-image: url("http://hoteltransilvania.com/img/fundo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-.meiosectionfotosemform{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
-.meiosectionfotosemform h1{
-    color: white;
-    text-transform: uppercase;
-    text-shadow: 0px 0px 8px rgb(68, 43, 65);
-    margin-bottom: 5px;
-}
-.meiosectionfotosemform img{
-    filter: invert(1);
-    opacity: 60%;
-    margin-bottom: 25px;
+/*
+
+Craftyslide CSS Styles
+
+*/
+
+#slideshow {
+	margin:0;
+	padding:0;
+	position:relative;
+	border:15px solid #fff;
+	-webkit-box-shadow:0 3px 5px #999;
+	-moz-box-shadow:0 3px 5px #999;
+	box-shadow:0 3px 5px #999;
 }
 
-/*formulario de reserva*/
-.formmeio{
-    width: 1266px;
-    text-transform: uppercase;
-    display: flex;
-    background-color: rgba(68, 43, 65, 0.295);
-    border-radius: 10px;
-    justify-content: flex-start;
-    padding: 17px;
-}
-.wrapperdata{
-    display: flex;
-}
-.data{
-    margin-right: 60px;
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 60px;
-    border: solid rgba(0, 0, 0, 0.39) 4px;
-    border-radius: 10px;
-    color: white;
-    background-color: rgba(68, 43, 65, 0.432);
-}
-.data label{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 29px;
-    font-size: 10px;
-}
-.calendario{
-    display: flex;
-}
-.calendario span{
-    height: 100%;
-    margin-left: 29px;
-    width: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-.calendario span>i{
-    font-weight: 100;
-    font-size: 21px;
-}
-.data input{
-    height: 39px;
-    font-size: 20px;
-    display: flex;
-    flex-direction: row-reverse;
-    width: calc(100% - 60px);
-    color: rgb(255, 255, 255);
-    border: none;
-    background-color: rgba(68, 43, 65, 0);
-}
-.wrapperpessoas{
-    display: flex;
-}
-.pessoas{
-    margin-right: 60px;
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 60px;
-    border: solid rgba(0, 0, 0, 0.39) 4px;
-    border-radius: 10px;
-    color: white;
-    background-color: rgba(68, 43, 65, 0.432);
-}
-.pessoas label{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 29px;
-    font-size: 10px;
-}
-.pessoas input{
-    margin-left: 29px;
-    height: 39px;
-    font-size: 20px;
-    display: flex;
-    flex-direction: row-reverse;
-    width: 171px;
-    color: white;
-    border: none;
-    background-color: rgba(68, 43, 65, 0);
-}
-.reserva{
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-}
-.reserva button{
-    border: solid rgba(0, 0, 0, 0.39) 4px;
-    cursor: pointer;
-    width: 100%;
-    height: 100%;
-    font-size: 15px;
-    display: flex;
-    text-transform: uppercase;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    background-color: rgba(68, 43, 65, 0.432);
-    border-radius: 10px;
-    transition: all 0.3s;
-}
-.reserva button:hover{
-    background-color: rgb(68, 43, 65);
-}
-.reserva i{
-    color: white;
-    font-size: 15px;
-    margin-right: 10px;
+#slideshow ul {
+	position:relative;
+	overflow:hidden;
+	margin:0;
+	padding:0;
 }
 
-/* Quartos */
-.quartos{
-    position: relative;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 500px;
-}
-.meioquartos{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-.dracula{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-.dracula img{
-    position: absolute;
-    bottom: 0;
-    width: auto;
-    height: auto;
-    max-width: 200px;
-}
-.mavis{
-    position: absolute;
-    right: 40px;
-    top: 40px;
-}
-.mavis img{
-    width: auto;
-    height: auto;
-    max-width: 200px;
-}
-.tituloquartos{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    color: rgb(0, 0, 0);
-}
-.tituloquartos h2{
-    text-transform: uppercase;
-    font-size: 40px;
-    margin-bottom: 20px;
-    font-weight: 900;
-    border-bottom:solid rgba(0, 0, 0, 0.322) 2px;
-}
-.tituloquartos em{
-    color: rgb(161, 0, 139);
-    text-transform: capitalize;
-    font-weight: 900;
-    font-size: 30px;
-}
-.tituloquartos p{
-    text-transform: capitalize;
-    font-weight: 300;
-    font-size: 20px;
-}
-.imgquartos{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 1300px;
-    height: 245px;
-    z-index: 1;
-}
-.quarto1{
-    position: relative;
-    width: 427px;
-    height: 245px;
-    background-image: url("http://hoteltransilvania.com/img/simples.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    border-radius: 10px;
-}
-.quarto2{
-    position: relative;
-    width: 427px;
-    height: 245px;
-    background-image: url("http://hoteltransilvania.com/img/duplo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    border-radius: 10px;
-}
-.quarto3{
-    position: relative;
-    width: 427px;
-    height: 245px;
-    background-image: url("http://hoteltransilvania.com/img/luxo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    border-radius: 10px;
-}
-.categoryWrapper{
-	width: 427px;
-    height: 245px;
-    border-radius: 10px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-}
-.categoryWrapper:after{
-	position: absolute;
+#slideshow ul li {
+	position:absolute;
 	top:0;
-	left: 0;
-	right:0;
-	bottom: 0;
-    background:rgba(99, 0, 87, 0.842);
-	content: '';
-	opacity: 0;
-	transition: opacity 0.6s ease 0s;
-    
-    border-radius: 10px;
-}
-.categoryWrapper:hover:after{
-	opacity: 0.4;
-}
-.categoryWrapper h1{
-	color:white;
-	font-size: 25px;
-	letter-spacing: 2px;
-	transition: all 0.15s ease 0s; 
-	position: relative;
-	z-index: 10;
-    text-transform: uppercase;
-    border: solid white 3px;
-    padding: 10px 30px;
-    background-color: rgba(68, 43, 65, 0.432);
-    border-radius: 10px;
-    text-shadow: 0px 0px 8px rgb(0, 0, 0);
-}
-.categoryWrapper:hover h1{
-	transform: translateY(-20px);
-}
-.categoryWrapper button{
-	position: absolute;
-	-webkit-appearance: none;
-	border: none;
-	background: none;
-	color:white;
-	width: 250px;
-	height:50px;
-	font-size: 20px;
-	padding: 0;
-	margin: 0;
-	outline: none;
-	z-index: 10;
-    text-transform: uppercase;
-    transition: all 0.15s ease 0s; 
-}
-.categoryWrapper:hover button{
-    transform: translatey(45px);
-}
-.categoryWrapper button span{
-	display: block;
-	position: relative;
-	height: 50px;
-	cursor: pointer;
-}
-.categoryWrapper button > span{
-	transition: color 0.2s;
-	color: transparent;
-}
-.categoryWrapper:hover button > span{
-    font-size: 22px;
-	color:white;
-    text-shadow: 0px 0px 8px rgb(0, 0, 0);
-}
-.categoryWrapper button > span > p{
-    font-weight: 900;
+	left:0;
+	margin:0;
+	padding:0;
+	list-style:none;
 }
 
-/* Atividades */
-.sectionatividades{
-    width: 100%;
-    height: 550px;
-    background-color: rgb(16, 0, 56);
-    background-image: url("http://hoteltransilvania.com/img/piscinateste2.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-.meioatividades{
-    display: flex;
-    flex-direction: column;
-    align-items:  center;
-    justify-content: space-around;
-    width: 100%;
-    height: 100%;
-}
-.tituloatividades h2{
-    color: rgb(255, 255, 255);
-    font-weight: 100;
-    text-transform: uppercase;
-    font-size: 40px;
-    font-weight: 900;
-    border-bottom:solid rgba(255, 254, 254, 0.322) 2px;
-}
-.slideshow-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 1300px;
-    height: 65%;
-    background-color: rgba(68, 43, 65, 0.295);
-    border-radius: 10px;
-}
-.mySlides {
-    display: none;
-}
-.tipoatividades{
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
-    justify-content: space-around;
-    color: white;
-}
-.tipoatividades img{
-    width: auto;
-    height: auto;
-    max-width: 550px;
-    border-radius: 10px;
-}
-.textoatividades{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    width: auto;
-    height: auto;
-    max-width: 550px;
-}
-.textoatividades h2{
-    text-transform: uppercase;
-    margin: 15px 0px;
-}
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.5s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: rgb(68, 43, 65);
-}
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+#pagination {
+	clear:both;
+	width:75px;
+	margin:25px auto 0;
+	padding:0;
 }
 
-/*local*/
-.sectionsemhumanos{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 500px;
-}
-.semhumanos{
-    display: flex;
-    width: 1300px;
-    height: 100%;
-    justify-content: space-between;
-    align-items: center;
-}
-.semhumanos img{
-    width: auto;
-    height: auto;
-    max-width: 50%;
-    border-radius: 10px;
-}
-.semhumanostexto{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 600px;
-    height: 100%;
-}
-.semhumanostexto h2{
-    text-transform: uppercase;
-    font-size: 40px;
-    text-align: center;
-}
-.semhumanostexto p{
-    padding-top: 60px;
-    height: 20%;
-    padding-left: 25px;
-    text-align: justify;
-}
-.draculasemhumanos img{
-    bottom: 0px;
-    right: 20px;
-    position: absolute;
-    width: auto;
-    height: auto;
-    max-width: 200px;
+#pagination li {
+	list-style:none;
+	float:left;
+	margin:0 2px;
 }
 
-/*roda pé*/
-footer{
-    background-color: rgb(59, 0, 51);
-    background: linear-gradient(180deg, rgba(64,0,40,1) 0%, rgba(89,0,62,1) 100%);
-    width: 100%;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.bloco1{
-    color: white;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.contato{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 50%;
-    height: 262px;
-    padding: 0px 72px;
-}
-.contato h2{
-    width: 122px;
-    text-transform: uppercase;
-    font-size: 25px;
-    border-bottom: solid rgba(255, 255, 255, 0.829) 1.5px;
-}
-.contato h3{
-    text-transform: uppercase;
-    font-weight: 100;
-    margin-left: 5px;
-}
-.infocontato{
-    display: flex;
-    align-items: center;
-}
-.infocontato p{
-    margin-left: 5px;
-}
-.bandeiraseredes{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    height: 262px;
-    padding: 0px 72px;
-    justify-content: space-evenly;
-}
-.bandeiras{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-.bandeiras h2{
-    border-bottom: solid rgba(255, 255, 255, 0.829) 1.5px;
-    text-transform: uppercase;
-    font-size: 25px;
-    margin-bottom: 25px;
-}
-.bandeiras ul{
-    display: flex;
-    margin-bottom: 15px;
-}
-.bandeiras li{
-    margin-left: 10px;
-}
-.divisoria{
-    height: 180px;
-    width: 1px;
-    background-color: rgba(255, 255, 255, 0.342);
-}
-.redes{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-.redes h2{
-    border-bottom: solid rgba(255, 255, 255, 0.829) 1.5px;
-    text-transform: uppercase;
-    font-size: 25px;
-    margin-bottom: 25px;
-}
-.redes i{
-    color: white;
-    font-size: 30px;
-    margin-left: 5px;
-}
-.bloco2{
-    border-top: rgba(255, 255, 255, 0.342) solid 1px;
-    width: 100%;
-    text-align: center;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.76);
-    font-size: 11px;
-    font-weight: 100;
-    padding-top: 5px;
-}
-.bloco2 a{
-    color: rgba(255, 255, 255, 0.76);
+#pagination li a {
+	display:block;
+	width:10px;
+	height:10px;
+	text-indent:-10000px;
+	background:url(../images/pagination.png);
 }
 
-/* back to top */
-.scrollToTopBtn{
-    background-color: rgb(59, 0, 51);
-    background: linear-gradient(180deg, rgba(64,0,40,1) 0%, rgba(89,0,62,1) 100%);
-    border: solid rgb(112, 0, 107) 2px;
-    border-radius: 60%;
-    color: white;
-    cursor: pointer;
-    font-size: 18px;
-    line-height: 48px;
-    width: 50px;
-    height: 50px;
-    position: fixed;
-    bottom: 40px;
-    right: 70px;
-    z-index: 100;
-    opacity: 0;
-    transform: translateY(100px);
-    transition: all 0.5s ease;
-}
-.showBtn{
-    opacity: 1;
-    transform: translateY(0);
+#pagination li a.active {
+	background-position:0 10px;
 }
 
-/* Contato */ 
-.sectioncontato{
-    width: 100%;
-    height: 700px;
-}
-.containercontato{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-.mapa{
-    width: 100%;
-    height: 200px;
-}
-.mapa iframe{
-    width: 100%;
-    height: 100%;
-}
-.divContForms{
-    height: 60%;
-    width: 950px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.divContForms h2{
-    text-transform: uppercase;
-    font-size: 50px;
-    text-decoration: underline;
-    text-align: center;
-}
-.formCont{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: space-between;
-}
-.divFormCont1{
-    height: 100%;
-}
-#divisor{
-    width: 1px;
-    margin-bottom: 48px;
-    height: 60%;
-    background-color: rgb(92, 19, 88);
-}
-.inputP{
-    width: 350px;
-    height: 40px;
-    display: flex;
-    margin-top: 30px;
-}
-.inputP:nth-child(1){
-    margin-top: 80px;
-}
-.inputP i{
-    background-color: rgb(92, 19, 88);
-    color: rgb(216, 216, 216);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 15%;
-    font-size: 20px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border: solid rgb(150, 150, 150) 0.5px;
-}
-.inputP input{
-    width: 85%;
-    height: 100%;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border: solid rgb(150, 150, 150) 0.5px;
-    font-size: 18px;
-    padding-left: 5px;
-}
-.inputP select{
-    width: 85%;
-    height: 42px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border: solid rgb(150, 150, 150) 0.5px;
-    cursor: pointer;
-    font-size: 18px;
-}
-.inputT{
-    width: 350px;
-    height: 110px;
-    display: flex;
-    margin-top: 30px;
-}
-.inputT textarea{
-    padding-left: 5px;
-}
-.inputT i{
-    background-color: rgb(92, 19, 88);
-    color: rgb(216, 216, 216);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 17.5%;
-    font-size: 20px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border: solid rgb(150, 150, 150) 0.5px;
-}
-#texto{
-    resize: none;
-    height: 110px;
-    width: 100%;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    font-size: 16px;
-}
-#buttonCont{
-    margin-top: 30px;
-    background: transparent;
-    text-transform: uppercase;
-    padding: 10px 33px 10px 20px;
-    border: solid rgb(150, 150, 150) 0.5px;
-    cursor: pointer;
-    transition: all 0.3s;
-    border-radius: 10px;
-}
-#buttonCont:hover{
-    background-color: rgb(92, 19, 88);
-    color: rgb(216, 216, 216);
-}
-#buttonCont i{
-    margin-right: 10px;
-}
-/* Quartos */
-.sectionQuartos{
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.meioQuartos{
-    width: 1300px;
-    height: 100%;
-    margin: 20px 0;
-}
-.meioQuartos h2{
-    text-transform: uppercase;
-    font-size: 50px;
-    text-decoration: underline;
-    text-align: center;
-}
-.listQuartos{
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
-    height: 100%;
-    justify-content: space-between;
-    align-items: center;
-    margin: 60px 0;
-}
-.listQuartos:nth-child(2n){
-    flex-direction: row;
-}
-.listQuartos img{
-    width: auto;
-    height: auto;
-    max-width: 50%;
-    border-radius: 10px;
-}
-.informacoesQuartos{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 600px;
-    height: 100%;
-}
-.informacoesQuartos h3{
-    text-transform: uppercase;
-    font-size: 40px;
-}
-.informacoesQuartos p{
-    padding-top: 40px;
-    height: 20%;
-    text-align: justify;
-}
-#buttonQuartos{
-    width: 30%;
-    margin-top: 50px;
-    background: transparent;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    border: solid rgb(150, 150, 150) 0.5px;
-    cursor: pointer;
-    transition: all 0.3s;
-    border-radius: 10px;
-}
-#buttonQuartos:hover{
-    background-color: rgb(92, 19, 88);
-    color: rgb(216, 216, 216);
-}
-/* Pagina Em breve */
-.divembreve{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0;
-}
-.divembreve h2{
-    text-transform: uppercase;
-    font-size: 60px;
-    padding-right: 200px;
-}
-
-
-
-/* responsividade */
-/* altura baixa */
-@media (max-height: 810px) and (orientation: landscape){
-    header{
-        background-color: rgb(78, 0, 68);
-        height: 80px;
-        box-shadow: 0 10px 50px rgba(78,0,46,0.95);
-    }
-    .meioheader{
-        flex-direction: row-reverse;
-    }
-    .logo img{
-        filter: none;
-    }
-}
-/* geral */
-@media (max-width: 1300px){
-    header{
-        background-color: rgb(78, 0, 68);
-        height: 80px;
-    }
-    .headerscroll{
-        background-color: rgba(78, 0, 68, 0.575);
-        box-shadow: none;
-    }
-    .meioheader{
-        flex-direction: row-reverse;
-    }
-    .logo img{
-        filter: none;
-    }
-    #btnmenu{
-        display: inherit;
-        height: 24px;
-    }
-    #nav ul{
-        display: none;
-    }
-    #nav.menuactive ul{
-        display: flex;
-    }
-    #nav.menuactive #btnmenu{
-        margin: 13px;
-        padding: 2px;
-    }
-    .meiosectionfoto h1 {
-        text-align: center;
-        width: 90%;
-        font-size: 25px;
-    }
-    .meiosectionfoto img{
-        width: auto;
-        height: auto;
-        max-width: 320px;    
-    }
-    .formmeio{
-        width: calc(90% - 17px);
-        flex-direction: column;
-    }
-    .wrapperdata{
-        width: 100%;
-    }
-    .data{
-        margin: 0;
-        width: 100%;
-    }
-    .data label{
-        font-size: 9px;
-    }
-    .data input{
-        font-size: 16px;
-    }
-    .wrapperpessoas{
-        width: 100%;
-    }
-    .pessoas{
-        margin: 0;
-        width: 100%;
-    }
-    .pessoas label{
-        font-size: 9px;
-    }
-    .pessoas input{
-        font-size: 16px;
-        width: 126px;
-    }
-    .reserva{
-        width: 100%;
-        height: 60px;
-    }
-    .reserva button{
-        width: 100%;
-        margin: 0;
-    }
-    .quartos{
-        height: 1000px;
-        display: flex;
-        justify-content: center;
-    }
-    .dracula{
-        visibility: hidden;
-    }
-    .mavis{
-        visibility: hidden;
-    }
-    .tituloquartos h2{
-        font-size: 28px;
-        text-align: center;
-    }
-    .tituloquartos em{
-        font-size: 25px;
-    }
-    .tituloquartos p{
-        font-size: 18px;
-    }
-    .meioquartos{
-        justify-content: space-evenly;
-        width: 90%;
-    }
-    .imgquartos{
-        width: 100%;
-        height: 80%;
-        flex-direction: column;
-    }
-    .imgquartos a{
-        width: 100%;
-    }
-    .quarto1{
-        width: 100%;
-    }
-    .quarto2{
-        width: 100%;
-    }
-    .quarto3{
-        width: 100%;
-    }
-    .categoryWrapper{
-        width: 100%;
-    }
-    .sectionatividades{
-        height: 800px;
-        display: flex;
-        justify-content: center;
-    }
-    .meioatividades{
-        width: 90%;
-    }
-    .tituloatividades h2{
-        text-align: center;
-        font-size: 28px;
-    }
-    .slideshow-container{
-        width: 100%;
-    }
-    .mySlides{
-        height: 100%;
-    }
-    .tipoatividades{
-        height: 100%;
-        flex-direction: column;
-        align-items: center;
-    }
-    .textoatividades{
-        max-width: 86%;
-    }
-    .textoatividades h2{
-        width: 100%;
-        text-align: center;
-    }
-    .textoatividades p{
-        text-align: justify;
-    }
-    .tipoatividades img{
-        max-width: 86%;
-    }
-    .semhumanos{
-        flex-direction: column;
-        justify-content: space-evenly;
-        width: 90%;
-    }
-    .semhumanos img{
-        margin: 10px;
-        max-width: 90%;
-        max-height: 70%;
-    }
-    .semhumanostexto{
-        justify-content: flex-end;
-        width: 90%;
-        height: calc(50% - 30px);
-    }
-    .semhumanostexto h2{
-        font-size: 28px;
-        margin-bottom: 30px;
-    }
-    .semhumanostexto p{
-        padding-top: 0;
-        padding-left: 0;
-        font-size: 15px;
-        width: 100%;
-        height: 100%;
-    }
-    .draculasemhumanos img{
-        visibility: hidden;
-    }
-    footer{
-        align-items: center;
-        height: 160px;
-        justify-content: space-between;
-    }
-    .bloco1{
-        width: calc(100% - 48px);
-        height: 100%;
-        height: 90%;
-    }
-    .bandeiraseredes{
-        padding: 0 12px;
-        height: 80%;
-        justify-content: space-between;
-    }
-    .bandeiras h2{
-        font-size: 14px;
-        margin-bottom: 0;
-        text-align: right;
-    }
-    .bandeiras ul{
-        width: auto;
-        max-width: 100%;
-        margin-bottom: 2px;
-    }
-    .bandeiras ul>li img{
-        width: auto;
-        max-width: 100%;
-    }
-    .redes h2{
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-    .redes i{
-        font-size: 20px;
-    }
-    .divisoria{
-        height: 100px;
-    }
-    .contato{
-        padding: 0 12px;
-        height: 80%;
-        justify-content: space-between;
-    }
-    .contato h2{
-        font-size: 16px;
-        width: 79px;
-    }
-    .infocontato:nth-child(3) p{
-        font-size: 6px;
-    }
-    .infocontato:nth-child(5) h3{
-        font-size: 9px;
-    }
-    .contato i{
-        font-size: 13px;
-    }
-    .contato h3{
-        font-size: 10px;
-    }
-    .contato p{
-        font-size: 8px;
-    }
-    .bloco2 h2{
-        font-size: 8px;
-        padding-bottom: 5px;
-        height: 10%;
-    }
-    .showBtn{
-        opacity: 0;
-    }
+.caption {
+	width:100%;
+	margin:0;
+	padding:10px;
+	position:absolute;
+	left:0;
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:14px;
+	font-weight:lighter;
+	color:#fff;
+	border-top:1px solid #000;
+	background:rgba(0,0,0,0.6);
 }
 /*! jQuery UI - v1.13.0 - 2021-11-05
 * http://jqueryui.com
@@ -2566,4 +1386,1283 @@ a.ui-button:active,
 .ui-widget-shadow {
 	-webkit-box-shadow: 0px 0px 5px #666666;
 	box-shadow: 0px 0px 5px #666666;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+    width: 12px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: rgb(37, 9, 34);
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(163, 0, 141, 0.644);   
+    border-radius: 10px;      
+    border: solid rgba(8, 2, 14, 0.39) 4px;
+}
+body::-webkit-scrollbar-thumb:hover {
+    border: none;
+}
+/*header*/
+header{
+    display: flex;
+    position: fixed;
+    background: rgb(78,0,46);
+    background: linear-gradient(180deg, rgba(78,0,46,0.9500175070028011) 0%, rgba(255,255,255,0) 100%);
+    width: 100%;
+    height: 280px;
+    transition: all 0.4s;
+    z-index: 10000000;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+}
+.headerscroll{
+    background-color: rgb(78, 0, 68);
+    height: 80px;
+    box-shadow: 0 10px 50px rgba(78,0,46,0.95);
+}
+.meioheader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.meioheaderscroll{
+    flex-direction: row-reverse;
+}
+#nav{
+    display: flex;
+    margin-top: 15px;
+    justify-content: flex-end;
+}
+#btnmenu{
+    margin: 14px 0px;
+    align-items: center;
+    display: none;
+    margin-right: 35px;
+}
+#nav ul{
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+    height: 100%;
+}
+#nav li{
+    position: relative;
+    padding: 2px;
+    margin: 13px;
+    border: none;
+    height: 20px;
+    cursor: pointer;
+}
+#nav li:hover{
+    border: none;
+}
+#nav li::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    left: 50%;
+    bottom:0;
+    background-color: rgba(255, 255, 255, 0.829);
+    transition: all ease-in-out .3s;
+}
+#nav li:hover::after{
+    width: 100%;
+    left: 0;
+}
+#nav li > a{
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+}
+.logo{
+    height: 100%;
+    display: flex;
+    justify-content: center
+}
+.logo img{
+    width: auto;
+    height: 100%;
+    /*max-height: 258px;*/
+    padding-right: 14px;
+    filter: drop-shadow(0px 0px 20px rgb(255, 0, 234));
+}
+.logoscroll img{
+    filter: none;
+}
+/*primeira sction*/
+.sectionfoto{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url("http://hoteltransilvania.com/img/fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.meiosectionfoto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+.meiosectionfoto h1{
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 8px rgb(68, 43, 65);
+    margin-bottom: 5px;
+}
+.meiosectionfoto img{
+    filter: invert(1);
+    opacity: 60%;
+    margin-bottom: 25px;
+}
+.sectionfotosemform{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 500px);
+    background-image: url("http://hoteltransilvania.com/img/fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.meiosectionfotosemform{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.meiosectionfotosemform h1{
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 8px rgb(68, 43, 65);
+    margin-bottom: 5px;
+}
+.meiosectionfotosemform img{
+    filter: invert(1);
+    opacity: 60%;
+    margin-bottom: 25px;
+}
+
+/*formulario de reserva*/
+.formmeio{
+    width: 1266px;
+    text-transform: uppercase;
+    display: flex;
+    background-color: rgba(68, 43, 65, 0.295);
+    border-radius: 10px;
+    justify-content: flex-start;
+    padding: 17px;
+}
+.wrapperdata{
+    display: flex;
+}
+.data{
+    margin-right: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 60px;
+    border: solid rgba(0, 0, 0, 0.39) 4px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(68, 43, 65, 0.432);
+}
+.data label{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 29px;
+    font-size: 10px;
+}
+.calendario{
+    display: flex;
+}
+.calendario span{
+    height: 100%;
+    margin-left: 29px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.calendario span>i{
+    font-weight: 100;
+    font-size: 21px;
+}
+.data input{
+    height: 39px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    width: calc(100% - 60px);
+    color: rgb(255, 255, 255);
+    border: none;
+    background-color: rgba(68, 43, 65, 0);
+}
+.wrapperpessoas{
+    display: flex;
+}
+.pessoas{
+    margin-right: 60px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 60px;
+    border: solid rgba(0, 0, 0, 0.39) 4px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(68, 43, 65, 0.432);
+}
+.pessoas label{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 29px;
+    font-size: 10px;
+}
+.pessoas input{
+    margin-left: 29px;
+    height: 39px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 171px;
+    color: white;
+    border: none;
+    background-color: rgba(68, 43, 65, 0);
+}
+.reserva{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+.reserva button{
+    border: solid rgba(0, 0, 0, 0.39) 4px;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    display: flex;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(68, 43, 65, 0.432);
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.reserva button:hover{
+    background-color: rgb(68, 43, 65);
+}
+.reserva i{
+    color: white;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+/* Quartos */
+.quartos{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 500px;
+}
+.meioquartos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.dracula{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.dracula img{
+    position: absolute;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    max-width: 200px;
+}
+.mavis{
+    position: absolute;
+    right: 40px;
+    top: 40px;
+}
+.mavis img{
+    width: auto;
+    height: auto;
+    max-width: 200px;
+}
+.tituloquartos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(0, 0, 0);
+}
+.tituloquartos h2{
+    text-transform: uppercase;
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: 900;
+    border-bottom:solid rgba(0, 0, 0, 0.322) 2px;
+}
+.tituloquartos em{
+    color: rgb(161, 0, 139);
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 30px;
+}
+.tituloquartos p{
+    text-transform: capitalize;
+    font-weight: 300;
+    font-size: 20px;
+}
+.imgquartos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1300px;
+    height: 245px;
+    z-index: 1;
+}
+.quarto1{
+    position: relative;
+    width: 427px;
+    height: 245px;
+    background-image: url("http://hoteltransilvania.com/img/simples.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px;
+}
+.quarto2{
+    position: relative;
+    width: 427px;
+    height: 245px;
+    background-image: url("http://hoteltransilvania.com/img/duplo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px;
+}
+.quarto3{
+    position: relative;
+    width: 427px;
+    height: 245px;
+    background-image: url("http://hoteltransilvania.com/img/luxo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px;
+}
+.categoryWrapper{
+	width: 427px;
+    height: 245px;
+    border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.categoryWrapper:after{
+	position: absolute;
+	top:0;
+	left: 0;
+	right:0;
+	bottom: 0;
+    background:rgba(99, 0, 87, 0.842);
+	content: '';
+	opacity: 0;
+	transition: opacity 0.6s ease 0s;
+    
+    border-radius: 10px;
+}
+.categoryWrapper:hover:after{
+	opacity: 0.4;
+}
+.categoryWrapper h1{
+	color:white;
+	font-size: 25px;
+	letter-spacing: 2px;
+	transition: all 0.15s ease 0s; 
+	position: relative;
+	z-index: 10;
+    text-transform: uppercase;
+    border: solid white 3px;
+    padding: 10px 30px;
+    background-color: rgba(68, 43, 65, 0.432);
+    border-radius: 10px;
+    text-shadow: 0px 0px 8px rgb(0, 0, 0);
+}
+.categoryWrapper:hover h1{
+	transform: translateY(-20px);
+}
+.categoryWrapper button{
+	position: absolute;
+	-webkit-appearance: none;
+	border: none;
+	background: none;
+	color:white;
+	width: 250px;
+	height:50px;
+	font-size: 20px;
+	padding: 0;
+	margin: 0;
+	outline: none;
+	z-index: 10;
+    text-transform: uppercase;
+    transition: all 0.15s ease 0s; 
+}
+.categoryWrapper:hover button{
+    transform: translatey(45px);
+}
+.categoryWrapper button span{
+	display: block;
+	position: relative;
+	height: 50px;
+	cursor: pointer;
+}
+.categoryWrapper button > span{
+	transition: color 0.2s;
+	color: transparent;
+}
+.categoryWrapper:hover button > span{
+    font-size: 22px;
+	color:white;
+    text-shadow: 0px 0px 8px rgb(0, 0, 0);
+}
+.categoryWrapper button > span > p{
+    font-weight: 900;
+}
+
+/* Atividades */
+.sectionatividades{
+    width: 100%;
+    height: 550px;
+    background-color: rgb(16, 0, 56);
+    background-image: url("http://hoteltransilvania.com/img/piscinateste2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.meioatividades{
+    display: flex;
+    flex-direction: column;
+    align-items:  center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+.tituloatividades h2{
+    color: rgb(255, 255, 255);
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 900;
+    border-bottom:solid rgba(255, 254, 254, 0.322) 2px;
+}
+.slideshow-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 1300px;
+    height: 65%;
+    background-color: rgba(68, 43, 65, 0.295);
+    border-radius: 10px;
+}
+.mySlides {
+    display: none;
+}
+.tipoatividades{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-around;
+    color: white;
+}
+.tipoatividades img{
+    width: auto;
+    height: auto;
+    max-width: 550px;
+    border-radius: 10px;
+}
+.textoatividades{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    max-width: 550px;
+}
+.textoatividades h2{
+    text-transform: uppercase;
+    margin: 15px 0px;
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.5s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgb(68, 43, 65);
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*local*/
+.sectionsemhumanos{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+.semhumanos{
+    display: flex;
+    width: 1300px;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.semhumanos img{
+    width: auto;
+    height: auto;
+    max-width: 50%;
+    border-radius: 10px;
+}
+.semhumanostexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    height: 100%;
+}
+.semhumanostexto h2{
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+}
+.semhumanostexto p{
+    padding-top: 60px;
+    height: 20%;
+    padding-left: 25px;
+    text-align: justify;
+}
+.draculasemhumanos img{
+    bottom: 0px;
+    right: 20px;
+    position: absolute;
+    width: auto;
+    height: auto;
+    max-width: 200px;
+}
+
+/*roda pé*/
+footer{
+    background-color: rgb(59, 0, 51);
+    background: linear-gradient(180deg, rgba(64,0,40,1) 0%, rgba(89,0,62,1) 100%);
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.bloco1{
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    height: 262px;
+    padding: 0px 72px;
+}
+.contato h2{
+    width: 122px;
+    text-transform: uppercase;
+    font-size: 25px;
+    border-bottom: solid rgba(255, 255, 255, 0.829) 1.5px;
+}
+.contato h3{
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-left: 5px;
+}
+.infocontato{
+    display: flex;
+    align-items: center;
+}
+.infocontato p{
+    margin-left: 5px;
+}
+.bandeiraseredes{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 262px;
+    padding: 0px 72px;
+    justify-content: space-evenly;
+}
+.bandeiras{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.bandeiras h2{
+    border-bottom: solid rgba(255, 255, 255, 0.829) 1.5px;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+.bandeiras ul{
+    display: flex;
+    margin-bottom: 15px;
+}
+.bandeiras li{
+    margin-left: 10px;
+}
+.divisoria{
+    height: 180px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.342);
+}
+.redes{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.redes h2{
+    border-bottom: solid rgba(255, 255, 255, 0.829) 1.5px;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+.redes i{
+    color: white;
+    font-size: 30px;
+    margin-left: 5px;
+}
+.bloco2{
+    border-top: rgba(255, 255, 255, 0.342) solid 1px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 11px;
+    font-weight: 100;
+    padding-top: 5px;
+}
+.bloco2 a{
+    color: rgba(255, 255, 255, 0.76);
+}
+
+/* back to top */
+.scrollToTopBtn{
+    background-color: rgb(59, 0, 51);
+    background: linear-gradient(180deg, rgba(64,0,40,1) 0%, rgba(89,0,62,1) 100%);
+    border: solid rgb(112, 0, 107) 2px;
+    border-radius: 60%;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 48px;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 40px;
+    right: 70px;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s ease;
+}
+.showBtn{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contato */ 
+.sectioncontato{
+    width: 100%;
+    height: 700px;
+}
+.containercontato{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.mapa{
+    width: 100%;
+    height: 200px;
+}
+.mapa iframe{
+    width: 100%;
+    height: 100%;
+}
+.divContForms{
+    height: 60%;
+    width: 950px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.divContForms h2{
+    text-transform: uppercase;
+    font-size: 50px;
+    text-decoration: underline;
+    text-align: center;
+}
+.formCont{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.divFormCont1{
+    height: 100%;
+}
+#divisor{
+    width: 1px;
+    margin-bottom: 48px;
+    height: 60%;
+    background-color: rgb(92, 19, 88);
+}
+.inputP{
+    width: 350px;
+    height: 40px;
+    display: flex;
+    margin-top: 30px;
+}
+.inputP:nth-child(1){
+    margin-top: 80px;
+}
+.inputP i{
+    background-color: rgb(92, 19, 88);
+    color: rgb(216, 216, 216);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 15%;
+    font-size: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: solid rgb(150, 150, 150) 0.5px;
+}
+.inputP input{
+    width: 85%;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: solid rgb(150, 150, 150) 0.5px;
+    font-size: 18px;
+    padding-left: 5px;
+}
+.inputP select{
+    width: 85%;
+    height: 42px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: solid rgb(150, 150, 150) 0.5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.inputT{
+    width: 350px;
+    height: 110px;
+    display: flex;
+    margin-top: 30px;
+}
+.inputT textarea{
+    padding-left: 5px;
+}
+.inputT i{
+    background-color: rgb(92, 19, 88);
+    color: rgb(216, 216, 216);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 17.5%;
+    font-size: 20px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: solid rgb(150, 150, 150) 0.5px;
+}
+#texto{
+    resize: none;
+    height: 110px;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 16px;
+}
+#buttonCont{
+    margin-top: 30px;
+    background: transparent;
+    text-transform: uppercase;
+    padding: 10px 33px 10px 20px;
+    border: solid rgb(150, 150, 150) 0.5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 10px;
+}
+#buttonCont:hover{
+    background-color: rgb(92, 19, 88);
+    color: rgb(216, 216, 216);
+}
+#buttonCont i{
+    margin-right: 10px;
+}
+/* Quartos */
+.sectionQuartos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.meioQuartos{
+    width: 1300px;
+    height: 100%;
+    margin: 20px 0;
+}
+.meioQuartos h2{
+    text-transform: uppercase;
+    font-size: 50px;
+    text-decoration: underline;
+    text-align: center;
+}
+.listQuartos{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px 0;
+}
+.listQuartos:nth-child(2n){
+    flex-direction: row;
+}
+.listQuartos img{
+    width: 50%;
+    height: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.informacoesQuartos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    height: 100%;
+}
+.informacoesQuartos h3{
+    text-transform: uppercase;
+    font-size: 40px;
+}
+.informacoesQuartos p{
+    padding-top: 40px;
+    height: 20%;
+    text-align: justify;
+}
+#buttonQuartos{
+    width: 30%;
+    margin-top: 50px;
+    background: transparent;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: solid rgb(150, 150, 150) 0.5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 10px;
+}
+#buttonQuartos:hover{
+    background-color: rgb(92, 19, 88);
+    color: rgb(216, 216, 216);
+}
+/* o hotel */
+.sectionHotel{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 900px;
+    justify-content: center;
+}
+.meioHotel{
+    width: 1300px;
+    height: 100%;
+    
+}
+.meioHotel h2{
+    text-transform: uppercase;
+    font-size: 50px;
+    text-decoration: underline;
+    text-align: center;
+    margin: 20px 0 40px 0;
+}
+.meioHotel p{
+    text-align: justify;
+    font-size: 18px;
+}
+
+
+
+
+/* Pagina Em breve */
+.divembreve{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+.divembreve h2{
+    text-transform: uppercase;
+    font-size: 60px;
+    padding-right: 200px;
+}
+
+
+
+/* responsividade */
+/* altura baixa */
+@media (max-height: 810px) and (orientation: landscape){
+    header{
+        background-color: rgb(78, 0, 68);
+        height: 80px;
+        box-shadow: 0 10px 50px rgba(78,0,46,0.95);
+    }
+    .meioheader{
+        flex-direction: row-reverse;
+    }
+    .logo img{
+        filter: none;
+    }
+}
+/* geral */
+@media (max-width: 1300px){
+    header{
+        background-color: rgb(78, 0, 68);
+        height: 80px;
+    }
+    .headerscroll{
+        background-color: rgba(78, 0, 68, 0.575);
+        box-shadow: none;
+    }
+    .meioheader{
+        flex-direction: row-reverse;
+    }
+    .logo img{
+        filter: none;
+    }
+    #btnmenu{
+        display: inherit;
+        height: 24px;
+    }
+    #nav ul{
+        display: none;
+    }
+    #nav.menuactive ul{
+        display: flex;
+    }
+    #nav.menuactive #btnmenu{
+        margin: 13px;
+        padding: 2px;
+    }
+    .meiosectionfoto h1 {
+        text-align: center;
+        width: 90%;
+        font-size: 25px;
+    }
+    .meiosectionfoto img{
+        width: auto;
+        height: auto;
+        max-width: 320px;    
+    }
+    .formmeio{
+        width: calc(90% - 17px);
+        flex-direction: column;
+    }
+    .wrapperdata{
+        width: 100%;
+    }
+    .data{
+        margin: 0;
+        width: 100%;
+    }
+    .data label{
+        font-size: 9px;
+    }
+    .data input{
+        font-size: 16px;
+    }
+    .wrapperpessoas{
+        width: 100%;
+    }
+    .pessoas{
+        margin: 0;
+        width: 100%;
+    }
+    .pessoas label{
+        font-size: 9px;
+    }
+    .pessoas input{
+        font-size: 16px;
+        width: 126px;
+    }
+    .reserva{
+        width: 100%;
+        height: 60px;
+    }
+    .reserva button{
+        width: 100%;
+        margin: 0;
+    }
+    .quartos{
+        height: 1000px;
+        display: flex;
+        justify-content: center;
+    }
+    .dracula{
+        visibility: hidden;
+    }
+    .mavis{
+        visibility: hidden;
+    }
+    .tituloquartos h2{
+        font-size: 28px;
+        text-align: center;
+    }
+    .tituloquartos em{
+        font-size: 25px;
+    }
+    .tituloquartos p{
+        font-size: 18px;
+    }
+    .meioquartos{
+        justify-content: space-evenly;
+        width: 90%;
+    }
+    .imgquartos{
+        width: 100%;
+        height: 80%;
+        flex-direction: column;
+    }
+    .imgquartos a{
+        width: 100%;
+    }
+    .quarto1{
+        width: 100%;
+    }
+    .quarto2{
+        width: 100%;
+    }
+    .quarto3{
+        width: 100%;
+    }
+    .categoryWrapper{
+        width: 100%;
+    }
+    .sectionatividades{
+        height: 800px;
+        display: flex;
+        justify-content: center;
+    }
+    .meioatividades{
+        width: 90%;
+    }
+    .tituloatividades h2{
+        text-align: center;
+        font-size: 28px;
+    }
+    .slideshow-container{
+        width: 100%;
+    }
+    .mySlides{
+        height: 100%;
+    }
+    .tipoatividades{
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .textoatividades{
+        max-width: 86%;
+    }
+    .textoatividades h2{
+        width: 100%;
+        text-align: center;
+    }
+    .textoatividades p{
+        text-align: justify;
+    }
+    .tipoatividades img{
+        max-width: 86%;
+    }
+    .semhumanos{
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 90%;
+    }
+    .semhumanos img{
+        margin: 10px;
+        max-width: 90%;
+        max-height: 70%;
+    }
+    .semhumanostexto{
+        justify-content: flex-end;
+        width: 90%;
+        height: calc(50% - 30px);
+    }
+    .semhumanostexto h2{
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    .semhumanostexto p{
+        padding-top: 0;
+        padding-left: 0;
+        font-size: 15px;
+        width: 100%;
+        height: 100%;
+    }
+    .draculasemhumanos img{
+        visibility: hidden;
+    }
+    footer{
+        align-items: center;
+        height: 160px;
+        justify-content: space-between;
+    }
+    .bloco1{
+        width: calc(100% - 48px);
+        height: 100%;
+        height: 90%;
+    }
+    .bandeiraseredes{
+        padding: 0 12px;
+        height: 80%;
+        justify-content: space-between;
+    }
+    .bandeiras h2{
+        font-size: 14px;
+        margin-bottom: 0;
+        text-align: right;
+    }
+    .bandeiras ul{
+        width: auto;
+        max-width: 100%;
+        margin-bottom: 2px;
+    }
+    .bandeiras ul>li img{
+        width: auto;
+        max-width: 100%;
+    }
+    .redes h2{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .redes i{
+        font-size: 20px;
+    }
+    .divisoria{
+        height: 100px;
+    }
+    .contato{
+        padding: 0 12px;
+        height: 80%;
+        justify-content: space-between;
+    }
+    .contato h2{
+        font-size: 16px;
+        width: 79px;
+    }
+    .infocontato:nth-child(3) p{
+        font-size: 6px;
+    }
+    .infocontato:nth-child(5) h3{
+        font-size: 9px;
+    }
+    .contato i{
+        font-size: 13px;
+    }
+    .contato h3{
+        font-size: 10px;
+    }
+    .contato p{
+        font-size: 8px;
+    }
+    .bloco2 h2{
+        font-size: 8px;
+        padding-bottom: 5px;
+        height: 10%;
+    }
+    .showBtn{
+        opacity: 0;
+    }
 }

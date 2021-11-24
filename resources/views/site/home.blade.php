@@ -81,7 +81,7 @@
             <a href="#">
                 <div class="quarto3">
                     <div class="categoryWrapper">
-                        <h1>luxo</h1>
+                        <h1>delux</h1>
                         <button>
                             <span>preço / diaria<p>$420</p></span>
                         </button>

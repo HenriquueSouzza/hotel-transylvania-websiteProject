@@ -13,11 +13,12 @@ class CreateQuartosTable extends Migration
      */
     public function up()
     {
-        Schema::create('quartos', function (Blueprint $table) {
+        Schema::create('rooms', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->string("title");
             $table->text("description");
+            $table->string('image');
         });
     }
 
@@ -28,6 +29,6 @@ class CreateQuartosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('quartos');
+        Schema::dropIfExists('rooms');
     }
 }
