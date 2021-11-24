@@ -3,13 +3,17 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\routeController;
 use App\Http\Controllers\searchController;
-
+use App\Http\Controllers\roomController;
 /*main routes*/
 Route::get('/', [routeController::class, 'index'] )->name('site.home');
 
 Route::get('/hotel', [routeController::class, 'emBreve'])->name('site.hotel');
 
-Route::get('/quartos', [routeController::class, 'emBreve'])->name('site.bedrooms');
+Route::get('/quartos', [roomController::class, 'quartos'])->name('site.bedrooms');
+Route::get('/quartos/create', [roomController::class, 'quartosCreate'])->name('site.bedroomsCreate');
+
+route::post('/create', [roomController::class, 'store'])->name('site.Create');
+
 
 Route::get('/fotos', [routeController::class, 'emBreve'])->name('site.imgs');
 
@@ -17,7 +21,7 @@ Route::get('/atividades', [routeController::class, 'emBreve'])->name('site.activ
 
 Route::get('/reserva', [routeController::class, 'emBreve'])->name('site.booking');
 
-Route::get('/contato', [routeController::class, 'emBreve'])->name('site.contact');
+Route::get('/contato', [routeController::class, 'contato'])->name('site.contact');
 
 /*search route*/
 Route::get('/reserva/search', [searchController::class, 'searchReserva'] )->name('site.search');
