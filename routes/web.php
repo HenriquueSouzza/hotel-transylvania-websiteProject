@@ -14,12 +14,11 @@ Route::get('/quartos/create', [roomController::class, 'quartosCreate'])->name('s
 
 route::post('/create', [roomController::class, 'store'])->name('site.Create');
 
-
 Route::get('/fotos', [routeController::class, 'emBreve'])->name('site.imgs');
 
 Route::get('/atividades', [routeController::class, 'emBreve'])->name('site.activities');
 
-Route::get('/reserva', [routeController::class, 'emBreve'])->name('site.booking');
+Route::get('/reserva', [routeController::class, 'booking'])->name('site.booking');
 
 Route::get('/contato', [routeController::class, 'contato'])->name('site.contact');
 

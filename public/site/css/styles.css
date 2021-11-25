@@ -1139,31 +1139,31 @@ a.ui-button:active,
 }
 .ui-icon,
 .ui-widget-content .ui-icon {
-	background-image: url("http://hoteltransilvania.com/img/ui-icons_ffffff_256x240.png");
+	background-image: url("http://localhost/img/ui-icons_ffffff_256x240.png");
 }
 .ui-widget-header .ui-icon {
-	background-image: url("http://hoteltransilvania.com/img/ui-icons_ffffff_256x240.png");
+	background-image: url("http://localhost/img/ui-icons_ffffff_256x240.png");
 }
 .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon,
 .ui-button:hover .ui-icon,
 .ui-button:focus .ui-icon {
-	background-image: url("http://hoteltransilvania.com/img/ui-icons_ffffff_256x240.png");
+	background-image: url("http://localhost/img/ui-icons_ffffff_256x240.png");
 }
 .ui-state-active .ui-icon,
 .ui-button:active .ui-icon {
-	background-image: url("http://hoteltransilvania.com/img/ui-icons_ffffff_256x240.png");
+	background-image: url("http://localhost/img/ui-icons_ffffff_256x240.png");
 }
 .ui-state-highlight .ui-icon,
 .ui-button .ui-state-highlight.ui-icon {
-	background-image: url("http://hoteltransilvania.com/img/ui-icons_000000_256x240.png");
+	background-image: url("http://localhost/img/ui-icons_000000_256x240.png");
 }
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon {
-	background-image: url("http://hoteltransilvania.com/img/ui-icons_cc0000_256x240.png");
+	background-image: url("http://localhost/img/ui-icons_cc0000_256x240.png");
 }
 .ui-button .ui-icon {
-	background-image: url("http://hoteltransilvania.com/img/ui-icons_ffffff_256x240.png");
+	background-image: url("http://localhost/img/ui-icons_ffffff_256x240.png");
 }
 
 /* positioning */
@@ -1401,11 +1401,11 @@ html{
 body::-webkit-scrollbar {
     width: 12px;
 }
-  
+
 body::-webkit-scrollbar-track {
     background: rgb(37, 9, 34);
 }
-  
+
 body::-webkit-scrollbar-thumb {
     background-color: rgba(163, 0, 141, 0.644);   
     border-radius: 10px;      
@@ -1413,6 +1413,22 @@ body::-webkit-scrollbar-thumb {
 }
 body::-webkit-scrollbar-thumb:hover {
     border: none;
+}
+.teia{
+    position: absolute;
+    opacity: 10%;
+    width: 100%;
+    top: 0;
+    filter: invert(1);
+    z-index: 0;
+}
+.titulo{
+    text-transform: uppercase;
+    font-size: 50px;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.658);
+    text-decoration-thickness: 2px;
+    text-align: center;
 }
 /*header*/
 header{
@@ -1467,10 +1483,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     height: 20px;
     cursor: pointer;
 }
-#nav li:hover{
+#nav li>a:hover{
     border: none;
 }
-#nav li::after{
+#nav li>a::after{
     content: '';
     position: absolute;
     width: 0;
@@ -1480,12 +1496,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: rgba(255, 255, 255, 0.829);
     transition: all ease-in-out .3s;
 }
-#nav li:hover::after{
+#nav li>a:hover::after{
     width: 100%;
     left: 0;
 }
 #nav li > a{
     font-size: 15px;
+    padding: 10px 0;
     color: white;
     text-transform: uppercase;
 }
@@ -1510,7 +1527,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-image: url("http://hoteltransilvania.com/img/fundo.jpg");
+    background-image: url("http://localhost/img/fundo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -1539,7 +1556,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     align-items: center;
     width: 100%;
     height: calc(100vh - 500px);
-    background-image: url("http://hoteltransilvania.com/img/fundo.jpg");
+    background-image: url("http://localhost/img/fundo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -1681,8 +1698,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* Quartos */
 .quartos{
+    background-color: #0c0012;
     position: relative;
-    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 500px;
 }
@@ -1724,11 +1741,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: rgb(0, 0, 0);
 }
 .tituloquartos h2{
+    color: white;
     text-transform: uppercase;
     font-size: 40px;
     margin-bottom: 20px;
     font-weight: 900;
-    border-bottom:solid rgba(0, 0, 0, 0.322) 2px;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.658);
+    text-decoration-thickness: 2px;
 }
 .tituloquartos em{
     color: rgb(161, 0, 139);
@@ -1737,6 +1757,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 30px;
 }
 .tituloquartos p{
+    color: white;
     text-transform: capitalize;
     font-weight: 300;
     font-size: 20px;
@@ -1753,7 +1774,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     position: relative;
     width: 427px;
     height: 245px;
-    background-image: url("http://hoteltransilvania.com/img/simples.jpg");
+    background-image: url("http://localhost/img/simples.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -1763,7 +1784,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     position: relative;
     width: 427px;
     height: 245px;
-    background-image: url("http://hoteltransilvania.com/img/duplo.jpg");
+    background-image: url("http://localhost/img/duplo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -1773,7 +1794,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     position: relative;
     width: 427px;
     height: 245px;
-    background-image: url("http://hoteltransilvania.com/img/luxo.jpg");
+    background-image: url("http://localhost/img/luxo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -1864,7 +1885,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 100%;
     height: 550px;
     background-color: rgb(16, 0, 56);
-    background-image: url("http://hoteltransilvania.com/img/piscinateste2.jpg");
+    background-image: url("http://localhost/img/fundoatt.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -1883,7 +1904,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     text-transform: uppercase;
     font-size: 40px;
     font-weight: 900;
-    border-bottom:solid rgba(255, 254, 254, 0.322) 2px;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.658);
+    text-decoration-thickness: 2px;
 }
 .slideshow-container {
     position: relative;
@@ -1892,7 +1915,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     justify-content: space-around;
     width: 1300px;
     height: 65%;
-    background-color: rgba(68, 43, 65, 0.295);
+    background-color: rgb(50 19 46 / 73%);
     border-radius: 10px;
 }
 .mySlides {
@@ -1906,9 +1929,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     color: white;
 }
 .tipoatividades img{
-    width: auto;
-    height: auto;
-    max-width: 550px;
+    width: 550px;
+    height: 270px;
+    object-fit: cover;
     border-radius: 10px;
 }
 .textoatividades{
@@ -1966,6 +1989,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /*local*/
 .sectionsemhumanos{
+    background-color: #0c0012;
     position: relative;
     display: flex;
     justify-content: center;
@@ -1995,11 +2019,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 .semhumanostexto h2{
     text-transform: uppercase;
+    color: white;
     font-size: 40px;
     text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.658);
+    text-decoration-thickness: 2px;
 }
 .semhumanostexto p{
     padding-top: 60px;
+    color: white;
     height: 20%;
     padding-left: 25px;
     text-align: justify;
@@ -2042,7 +2071,9 @@ footer{
     width: 122px;
     text-transform: uppercase;
     font-size: 25px;
-    border-bottom: solid rgba(255, 255, 255, 0.829) 1.5px;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.658);
+    text-decoration-thickness: 2px;
 }
 .contato h3{
     text-transform: uppercase;
@@ -2070,7 +2101,9 @@ footer{
     align-items: flex-end;
 }
 .bandeiras h2{
-    border-bottom: solid rgba(255, 255, 255, 0.829) 1.5px;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.658);
+    text-decoration-thickness: 2px;
     text-transform: uppercase;
     font-size: 25px;
     margin-bottom: 25px;
@@ -2093,7 +2126,9 @@ footer{
     align-items: flex-end;
 }
 .redes h2{
-    border-bottom: solid rgba(255, 255, 255, 0.829) 1.5px;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.658);
+    text-decoration-thickness: 2px;
     text-transform: uppercase;
     font-size: 25px;
     margin-bottom: 25px;
@@ -2144,8 +2179,11 @@ footer{
 
 /* Contato */ 
 .sectioncontato{
+    color: white;
+    position: relative;
     width: 100%;
     height: 700px;
+    background-color: #0c0012;
 }
 .containercontato{
     width: 100%;
@@ -2154,16 +2192,19 @@ footer{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
 }
-.mapa{
+.mapaCont{
+    z-index: 1;
     width: 100%;
     height: 200px;
 }
-.mapa iframe{
+.mapaCont iframe{
     width: 100%;
     height: 100%;
 }
 .divContForms{
+    z-index: 1;
     height: 60%;
     width: 950px;
     display: flex;
@@ -2174,6 +2215,8 @@ footer{
     text-transform: uppercase;
     font-size: 50px;
     text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.658);
+    text-decoration-thickness: 2px;
     text-align: center;
 }
 .formCont{
@@ -2202,7 +2245,7 @@ footer{
     margin-top: 80px;
 }
 .inputP i{
-    background-color: rgb(92, 19, 88);
+    background-color: #4e0037;
     color: rgb(216, 216, 216);
     display: flex;
     justify-content: center;
@@ -2212,25 +2255,29 @@ footer{
     font-size: 20px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    border: solid rgb(150, 150, 150) 0.5px;
+    border: solid rgb(73, 73, 73) 0.5px;
 }
 .inputP input{
+    color: white;
+    background-color: #4e0037;
     width: 85%;
     height: 100%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    border: solid rgb(150, 150, 150) 0.5px;
+    border: solid rgb(73, 73, 73) 0.5px;
     font-size: 18px;
     padding-left: 5px;
 }
 .inputP select{
+    background-color: #4e0037;
     width: 85%;
     height: 42px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    border: solid rgb(150, 150, 150) 0.5px;
+    border: solid rgb(73, 73, 73) 0.5px;
     cursor: pointer;
     font-size: 18px;
+    color: white;
 }
 .inputT{
     width: 350px;
@@ -2239,10 +2286,13 @@ footer{
     margin-top: 30px;
 }
 .inputT textarea{
+    color: white;
+    border: solid rgb(73, 73, 73) 0.5px;
+    background-color: #4e0037;
     padding-left: 5px;
 }
 .inputT i{
-    background-color: rgb(92, 19, 88);
+    background-color: #4e0037;
     color: rgb(216, 216, 216);
     display: flex;
     justify-content: center;
@@ -2252,7 +2302,7 @@ footer{
     font-size: 20px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    border: solid rgb(150, 150, 150) 0.5px;
+    border: solid rgb(73, 73, 73) 0.5px;
 }
 #texto{
     resize: none;
@@ -2263,29 +2313,31 @@ footer{
     font-size: 16px;
 }
 #buttonCont{
+    color: white;
     margin-top: 30px;
     background: transparent;
     text-transform: uppercase;
     padding: 10px 33px 10px 20px;
-    border: solid rgb(150, 150, 150) 0.5px;
+    border: solid rgb(73, 73, 73) 0.5px;
     cursor: pointer;
     transition: all 0.3s;
     border-radius: 10px;
 }
 #buttonCont:hover{
-    background-color: rgb(92, 19, 88);
-    color: rgb(216, 216, 216);
+    background-color: #4e0037;
 }
 #buttonCont i{
     margin-right: 10px;
 }
 /* Quartos */
 .sectionQuartos{
+    color: white;
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #0c0012;
 }
 .meioQuartos{
     width: 1300px;
@@ -2296,6 +2348,8 @@ footer{
     text-transform: uppercase;
     font-size: 50px;
     text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.658);
+    text-decoration-thickness: 2px;
     text-align: center;
 }
 .listQuartos{
@@ -2333,6 +2387,7 @@ footer{
     text-align: justify;
 }
 #buttonQuartos{
+    color: white;
     width: 30%;
     margin-top: 50px;
     background: transparent;
@@ -2344,50 +2399,119 @@ footer{
     border-radius: 10px;
 }
 #buttonQuartos:hover{
-    background-color: rgb(92, 19, 88);
-    color: rgb(216, 216, 216);
+    background-color: #4e0037;
 }
 /* o hotel */
 .sectionHotel{
+    color: white;
+    position: relative;
+    width: 100%;
+    height: 1300px;
+    background-color: #0c0012;
+}
+.containerMeioHotel{
+    z-index: 1;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 900px;
-    justify-content: center;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
 }
 .meioHotel{
     width: 1300px;
-    height: 100%;
-    
+    height: auto;
+    z-index: 1;
 }
 .meioHotel h2{
-    text-transform: uppercase;
-    font-size: 50px;
-    text-decoration: underline;
-    text-align: center;
     margin: 20px 0 40px 0;
+    color: white;
 }
 .meioHotel p{
+    color: white;
     text-align: justify;
     font-size: 18px;
 }
-
-
-
-
+.mapaHotel{
+    z-index: 1;
+    width: 1300px;
+    height: 300px;
+}
+.tituloMapaHotel{
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.658);
+    text-decoration-thickness: 2px;
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.mapaHotel iframe{
+    background-image: url("http://localhost/img/mapaload.jpg");
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+/* reserva */
+.sectionReserva{
+    color: white;
+    position: relative;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0c0012;
+}
+.sectionReserva h2{
+    margin-top: 20px;
+}
+.divReserva{
+    z-index: 1;
+    width: 1300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+.divFormReserva{
+    margin-bottom: 20px;
+}
+.divFormReserva h3{
+    text-transform: uppercase;
+    font-size: 28px;
+}
+.divFormReserva a{
+    font-weight: 100;
+    color: rgb(184, 184, 184);
+    margin-left: 59px;
+}
+.divFormReserva a:hover{
+    color: white;
+}
+.divFormReserva a:active{
+    color: rgb(0, 0, 88);
+}
 /* Pagina Em breve */
+.embreve{
+    background-color: #0c0012;
+    width: 100%;
+    height: 100%;
+}
 .divembreve{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px 0;
 }
 .divembreve h2{
+    color: white;
     text-transform: uppercase;
     font-size: 60px;
     padding-right: 200px;
 }
-
 
 
 /* responsividade */

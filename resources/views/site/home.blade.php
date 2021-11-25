@@ -4,7 +4,7 @@
     <div class="meiosectionfoto">
         <h1>ferias arrepiantes só no hotel transylvania</h1>
         <img src="{{asset('img/linha-removebg-preview.png')}}" alt="">
-        <form class="formmeio" action="{{route('site.search')}}" method="get">
+        <form class="formmeio" action="{{route('site.booking')}}" method="GET">
             <div class="wrapperdata">
                 <div class="data">
                     <label>entrada</label>                        

@@ -21,4 +21,7 @@ class routeController extends Controller
     public function hotel(){
         return view('site.hotel');
     }
+    public function booking(){
+        return view('site.booking');
+    }
 }
