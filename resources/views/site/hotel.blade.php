@@ -7,7 +7,7 @@
     </div>
 </section>
 <section class="sectionHotel">
-    <img class="teia" src="{{asset('img/teiagrande.png')}}" alt="">
+    <img id="teia" src="{{asset('img/teiagrande.png')}}" alt="">
     <div class="containerMeioHotel">
         <div class="meioHotel">
             <h2 class="titulo">o hotel</h2>

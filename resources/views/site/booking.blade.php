@@ -7,7 +7,7 @@
     </div>
 </section>
 <section class="sectionReserva">
-    <img class="teia" src="{{asset('img/teiagrande.png')}}" alt="">
+    <img id="teia" src="{{asset('img/teiagrande.png')}}" alt="">
     <h2 class="titulo">reserva</h2>
     <div class="divReserva">
         <div>
