@@ -13,10 +13,6 @@ class roomController extends Controller
         return view('site.quartos', ['quartos' => $quartos]);
     }
 
-    public function quartosCreate(){
-        return view('site.quartosCreate');
-    }
-
     public function store(Request $request){
             $Room = new Room;
             $Room->title = $request->title;
@@ -32,6 +28,6 @@ class roomController extends Controller
             }
 
             $Room->save();
-            return redirect('/quartos/create')->with('msg', 'Quarto criado com sucesso!');
+            return redirect('/create')->with('msgRoom', 'Quarto criado com sucesso!');
     }
 }

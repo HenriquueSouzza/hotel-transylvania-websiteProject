@@ -24,4 +24,7 @@ class routeController extends Controller
     public function booking(){
         return view('site.booking');
     }
+    public function Create(){
+        return view('site.Create');
+    }
 }

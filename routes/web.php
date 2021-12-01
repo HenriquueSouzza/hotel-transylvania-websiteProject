@@ -4,17 +4,19 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\routeController;
 use App\Http\Controllers\searchController;
 use App\Http\Controllers\roomController;
+use App\Http\Controllers\PhotoController;
 /*main routes*/
 Route::get('/', [routeController::class, 'index'] )->name('site.home');
+
+Route::get('/create', [routeController::class, 'Create'])->name('site.Create');
 
 Route::get('/hotel', [routeController::class, 'hotel'])->name('site.hotel');
 
 Route::get('/quartos', [roomController::class, 'quartos'])->name('site.roons');
-Route::get('/quartos/create', [roomController::class, 'quartosCreate'])->name('site.roonsCreate');
+route::post('/quartos/create', [roomController::class, 'store'])->name('site.roomsCreate');
 
-route::post('/create', [roomController::class, 'store'])->name('site.Create');
-
-Route::get('/fotos', [routeController::class, 'emBreve'])->name('site.imgs');
+Route::get('/fotos', [PhotoController::class, 'Photo'])->name('site.imgs');
+route::post('/fotos/create', [PhotoController::class, 'store'])->name('site.photosCreate');
 
 Route::get('/atividades', [routeController::class, 'emBreve'])->name('site.activities');
 
