@@ -9,8 +9,9 @@ class roomController extends Controller
 {
     public function quartos(){
         $quartos = Room::all();
+        //$room = Room::findOrFail();
 
-        return view('site.quartos', ['quartos' => $quartos]);
+    return view('site.quartos', ['quartos' => $quartos /*,'room' => $room]*/]);
     }
 
     public function store(Request $request){

@@ -18,11 +18,18 @@
                 <div class="informacoesQuartos">
                     <h3>{{$quarto->title}}</h3>
                     <p>{{$quarto->description}}</p>
-                    <button id="buttonQuartos">veja mais</button>
+                    <button class="buttonQuartos">veja mais</button>
                 </div>
             </div>
             @endforeach
-        @endif
+            @endif
+        </div>
+    <div class="modalContainer">
+        <div class="modal">
+            <button class="btnFechar" title="Fechar">X</button>
+            <h3>aa</h3>
+            <button class="buttonQuartos">reservar</button>
+        </div>
     </div>
 </section>
 @endsection

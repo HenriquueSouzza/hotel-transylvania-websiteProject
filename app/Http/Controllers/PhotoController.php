@@ -16,7 +16,7 @@ class PhotoController extends Controller
         $Photo = new Photo;
         $Photo->title = $request->title;
 
-        //imagane upload
+        //image upload
         if($request->hasFile('image') && $request->file('image')->isValid()){
             $requestImage = $request->image;
             $extension = $requestImage->extension(); 

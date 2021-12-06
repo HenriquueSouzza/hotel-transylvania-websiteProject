@@ -2,7 +2,7 @@
 const header = document.querySelector("header");
 const meioheader = document.querySelector("div.meioheader");
 const logo = document.querySelector("div.logo");
-  window.addEventListener("scroll", () => {
+window.addEventListener("scroll", () => {
   header.classList.toggle("headerscroll", window.scrollY > 0);
   meioheader.classList.toggle("meioheaderscroll", window.scrollY > 0);
   logo.classList.toggle("logoscroll", window.scrollY > 0);
@@ -31,13 +31,36 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
+  if(slides.length != "0"){
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
   }
-  slides[slideIndex-1].style.display = "block";
 };
+
+//modal
+function iniciaModal(modalID) {
+  const modal = modalID;
+  const bodyhidden = document.querySelector('body')
+  if(modal){
+    modal.classList.add('show');
+    bodyhidden.classList.add('hidden');
+    modal.addEventListener('click', (e) => {
+      if(e.target.className == 'modalContainer show' || e.target.className == 'btnFechar') {
+        modal.classList.remove('show');
+        bodyhidden.classList.remove('hidden');
+      }
+    });
+  }
+}
+const clickBTN = document.querySelector(".buttonQuartos");
+const selectModal = document.querySelector('.modalContainer');
+if(selectModal != null){
+  clickBTN.addEventListener('click', () => iniciaModal(selectModal));
+}
 
 // back to top
 // target
@@ -67,11 +90,4 @@ scrollToTopBtn.addEventListener("click", scrollToTop);
 
 let observer = new IntersectionObserver(callback);
 observer.observe(target);
-
-//
-$("#slideshow").craftyslide();
-
-
-
-
 // end main

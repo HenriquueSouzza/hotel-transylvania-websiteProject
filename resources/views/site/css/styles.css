@@ -50,7 +50,7 @@ header{
     width: 100%;
     height: 280px;
     transition: all 0.4s;
-    z-index: 10000000;
+    z-index: 1000;
 }
 input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(100%);
@@ -998,7 +998,7 @@ footer{
     height: 20%;
     text-align: justify;
 }
-#buttonQuartos{
+.buttonQuartos{
     color: white;
     width: 30%;
     margin-top: 50px;
@@ -1010,8 +1010,73 @@ footer{
     transition: all 0.3s;
     border-radius: 10px;
 }
-#buttonQuartos:hover{
+.buttonQuartos:hover{
     background-color: #4e0037;
+}
+.modalContainer{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.modalContainer:after {
+    content: "";
+    background-image:url('http://hoteltransilvania.com/img/teiagrande.png');
+    background-size: auto;
+    filter: invert(100%);
+    opacity: 8%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+@keyframes modal {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.modalContainer.show{
+    display: flex;
+}
+body.hidden{
+    overflow: hidden;
+}
+.modal{
+    position: relative;
+    background-color: #150020;
+    width: 80%;
+    height: 78%;
+    box-shadow: 0px 0px 40px 20px #350052;
+    border-radius: 10px;
+}
+.show .modal{
+    animation: modal .3s;
+}
+.btnFechar{
+    color: white;
+    background-color: #150020;
+    font-size: 25px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 6px solid #2b0042;
 }
 /* o hotel */
 .sectionHotel{
