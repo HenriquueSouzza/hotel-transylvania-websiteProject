@@ -727,27 +727,6 @@ function showSlides(n) {
   }
 };
 
-//modal
-function iniciaModal(modalID) {
-  const modal = modalID;
-  const bodyhidden = document.querySelector('body')
-  if(modal){
-    modal.classList.add('show');
-    bodyhidden.classList.add('hidden');
-    modal.addEventListener('click', (e) => {
-      if(e.target.className == 'modalContainer show' || e.target.className == 'btnFechar') {
-        modal.classList.remove('show');
-        bodyhidden.classList.remove('hidden');
-      }
-    });
-  }
-}
-const clickBTN = document.querySelector(".buttonQuartos");
-const selectModal = document.querySelector('.modalContainer');
-if(selectModal != null){
-  clickBTN.addEventListener('click', () => iniciaModal(selectModal));
-}
-
 // back to top
 // target
 var target = document.querySelector("footer");

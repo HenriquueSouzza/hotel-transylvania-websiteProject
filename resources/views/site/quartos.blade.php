@@ -18,18 +18,39 @@
                 <div class="informacoesQuartos">
                     <h3>{{$quarto->title}}</h3>
                     <p>{{$quarto->description}}</p>
-                    <button class="buttonQuartos">veja mais</button>
+                    <button id="id{{$quarto->id}}" class="buttonQuartos">veja mais</button>
+                    <div id="{{str_replace(' ','_',$quarto->title)}}" class="modalContainer">
+                        <div class="modal">
+                            <button class="btnFechar" title="Fechar">X</button>
+                            <h3>{{$quarto->title}}</h3>
+                            <button class="buttonQuartos">reservar</button>
+                        </div>
+                    </div>
+                    <script>
+                        function iniciaModal(modalID) {
+                        const modal = modalID;
+                        const bodyhidden = document.querySelector('body')
+                        if(modal){
+                            modal.classList.add('show');
+                            bodyhidden.classList.add('hidden');
+                            modal.addEventListener('click', (e) => {
+                            if(e.target.className == 'modalContainer show' || e.target.className == 'btnFechar') {
+                                modal.classList.remove('show');
+                                bodyhidden.classList.remove('hidden');
+                            }
+                            });
+                        }
+                        }
+                        const id{{$quarto->id}} = document.getElementById("id{{$quarto->id}}");
+                        const {{str_replace(' ','_',$quarto->title)}} = document.getElementById("{{str_replace(' ','_',$quarto->title)}}");
+                        if({{str_replace(' ','_',$quarto->title)}} != null){
+                            id{{$quarto->id}}.addEventListener('click', () => iniciaModal({{str_replace(' ','_',$quarto->title)}}));
+                        }
+                    </script>
                 </div>
             </div>
             @endforeach
             @endif
         </div>
-    <div class="modalContainer">
-        <div class="modal">
-            <button class="btnFechar" title="Fechar">X</button>
-            <h3>aa</h3>
-            <button class="buttonQuartos">reservar</button>
-        </div>
-    </div>
 </section>
 @endsection
